@@ -2,8 +2,20 @@
     box-sizing: border-box;
     letter-spacing: 0.2rem;
     color: #f7f7f7;
-    background-color: #393E46;
 }
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #393E46;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(20%);
+  }
 
 .link-underline {
     border-bottom-width: 0;
@@ -16,13 +28,12 @@
 
 .link-underline:hover {
     background-size: 100% 3px;
-    background-position: 0 100%
 }
 
 .resume {
     border-radius: 15px;
     border-width: 2px;
-    border-color: beige;
+    border-color: #f5f5dc;
     background-color: transparent;
     transition: background-color .3s ease-in-out;
 }
@@ -42,4 +53,11 @@
 .divider {
     height: 3px;
     background-color: beige;
+}
+
+.bounce:hover
+{
+    cursor: grabbing;
+    transition-duration: .2s;
+    transform: translateY(-15px);
 }

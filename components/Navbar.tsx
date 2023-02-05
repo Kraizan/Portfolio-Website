@@ -9,7 +9,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex flex-row justify-between px-40 pt-16 pb-8">
+    <nav className="flex flex-row justify-between pt-16 pb-8">
       <div className="text-3xl my-auto">
         <Link href="#">Portfolio</Link>
       </div>
@@ -18,7 +18,9 @@ export default function Navbar() {
           {NavOptions.map((NavOptions) => (
             <div key={NavOptions.Event} className="mx-3 my-auto">
               <Link href={NavOptions.Link}>
-                <div className="link-underline">{NavOptions.Event}</div>
+                <div className="link-underline hover:text-yellow">
+                  {NavOptions.Event}
+                </div>
               </Link>
             </div>
           ))}
