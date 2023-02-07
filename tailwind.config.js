@@ -45,6 +45,10 @@ module.exports = {
         blue: "rgb(20 158 202)",
         "light-yellow": "#eac970",
       },
+      backgroundImage: {
+        Anisearch: "url('/images/Anisearch.png')",
+        Portfolio: "url('/images/Portfolio.png')",
+      },
     },
   },
   plugins: [],

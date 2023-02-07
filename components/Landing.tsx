@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Name from "./Name";
 import Link from "next/link";
+import Image from "next/image";
 export default function Landing() {
   const firstName = ["V", "A", "N", "S", "H", "A", "J"];
   const lastName = ["B", "H", "A", "T", "N", "A", "G", "A", "R"];
@@ -16,15 +17,19 @@ export default function Landing() {
         </div>
         <div className="mt-4 text-2xl leading-loose">
           A{" "}
-          <Link className="link-underline pb-1 hover:text-green italic" href="">
+          <Link className="link-underline pb-1 hover:text-green" href="">
             Full Stack Coder
           </Link>
           ,{" "}
-          <Link className="link-underline pb-1 hover:text-cyan italic" href="">
+          <Link
+            className="link-underline pb-1 hover:text-cyan"
+            href="https://linktr.ee/kraizan"
+            target={"_blank"}
+          >
             Competitive Programmer
           </Link>
           <br /> and an aspiring{" "}
-          <Link className="link-underline pb-1 hover:text-blue italic" href="">
+          <Link className="link-underline pb-1 hover:text-blue" href="">
             Blockchain Developer
           </Link>
           .

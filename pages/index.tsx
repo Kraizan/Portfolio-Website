@@ -4,6 +4,9 @@ import About from "@/components/About";
 import Head from "next/head";
 import Landing from "@/components/Landing";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -17,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <video
-        src={require("../public/videos/bg-video.mp4")}
+        src={require("../public/videos/bg_video.mp4")}
         autoPlay
         loop
         muted
@@ -31,6 +34,11 @@ export default function Home() {
         <Divider />
         <Skills />
         <Divider />
+        <Projects />
+        <Divider />
+        <Contact />
+        <Divider />
+        <Footer />
       </main>
     </>
   );
