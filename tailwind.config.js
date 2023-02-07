@@ -43,6 +43,7 @@ module.exports = {
         beige: "#f5f5dc",
         cyan: "#03a89e",
         blue: "rgb(20 158 202)",
+        "light-yellow": "#eac970",
       },
     },
   },

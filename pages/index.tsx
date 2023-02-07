@@ -1,7 +1,9 @@
 import Divider from "@/components/Divider";
 import Navbar from "@/components/Navbar";
+import About from "@/components/About";
 import Head from "next/head";
-import Landing from "./Landing";
+import Landing from "@/components/Landing";
+import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <>
@@ -24,6 +26,10 @@ export default function Home() {
         <Navbar />
         <Divider />
         <Landing />
+        <Divider />
+        <About />
+        <Divider />
+        <Skills />
         <Divider />
       </main>
     </>

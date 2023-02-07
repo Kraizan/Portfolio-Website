@@ -1,63 +1,94 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 * {
-    box-sizing: border-box;
-    letter-spacing: 0.2rem;
-    color: #f7f7f7;
+  box-sizing: border-box;
+  letter-spacing: 0.2rem;
+  color: #f7f7f7;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #eac970 #f5f5dc;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f5f5dc;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #eac970;
+  border-radius: 10px;
+  border: 3px double #fffafa;
 }
 
 video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background-color: #393E46;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    filter: brightness(20%);
-  }
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #393e46;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(20%);
+}
 
 .link-underline {
-    border-bottom-width: 0;
-    background-image: linear-gradient(transparent, transparent), linear-gradient(beige,beige);
-    background-size: 0 3px;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size .3s ease-in-out;
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(beige, beige);
+  background-size: 0 3px;
+  background-position: 0 105%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .link-underline:hover {
-    background-size: 100% 3px;
+  background-size: 100% 3px;
 }
 
 .resume {
-    border-radius: 15px;
-    border-width: 2px;
-    border-color: #f5f5dc;
-    background-color: transparent;
-    transition: background-color .3s ease-in-out;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: #f5f5dc;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.resume:hover{
-    background-color: beige;
+.resume:hover {
+  background-color: beige;
 }
 
 .resume-text {
-    color: #f7f7f7;
+  color: #f7f7f7;
 }
 
 .resume-text:hover {
-    color: #393E46
+  color: #393e46;
 }
 
 .divider {
-    height: 3px;
-    background-color: beige;
+  height: 3px;
+  background-color: beige;
 }
 
-.bounce:hover
-{
-    cursor: grabbing;
-    transition-duration: .2s;
-    transform: translateY(-15px);
+.bounce:hover {
+  cursor: grabbing;
+  transition-duration: 0.2s;
+  transform: translateY(-15px);
+}
+
+.level {
+  height: 100%;
+  background-color: #eac970;
 }

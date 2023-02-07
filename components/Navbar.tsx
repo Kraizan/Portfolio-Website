@@ -2,24 +2,24 @@ import Link from "next/link";
 
 export default function Navbar() {
   const NavOptions = [
-    { Event: "About", Link: "#About" },
-    { Event: "Skills", Link: "#Skills" },
-    { Event: "Projects", Link: "#Projects" },
-    { Event: "Contact", Link: "#Contact" },
+    { Option: "About", Link: "#About" },
+    { Option: "Skills", Link: "#Skills" },
+    { Option: "Projects", Link: "#Projects" },
+    { Option: "Contact", Link: "#Contact" },
   ];
 
   return (
-    <nav className="flex flex-row justify-between pt-16 pb-8">
-      <div className="text-3xl my-auto">
+    <nav className="flex flex-row justify-between pt-14 pb-8">
+      <div className="text-3xl my-auto p-2">
         <Link href="#">Portfolio</Link>
       </div>
       <div className="flex text-lg">
         <div className="flex">
           {NavOptions.map((NavOptions) => (
-            <div key={NavOptions.Event} className="mx-3 my-auto">
+            <div key={NavOptions.Option} className="mx-3 my-auto">
               <Link href={NavOptions.Link}>
                 <div className="link-underline hover:text-yellow">
-                  {NavOptions.Event}
+                  {NavOptions.Option}
                 </div>
               </Link>
             </div>
