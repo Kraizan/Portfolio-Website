@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 export default function Navbar() {
   const NavOptions = [
     { Option: "About", Link: "#About" },
@@ -10,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex flex-row justify-between pt-14 pb-8">
-      <div className="text-3xl my-auto p-2">
+      <div className="text-3xl my-auto">
         <Link href="#">Portfolio</Link>
       </div>
       <div className="flex text-lg">
@@ -26,7 +25,13 @@ export default function Navbar() {
           ))}
         </div>
         <div>
-          <button className="ml-4 tracking-widest resume resume-text p-2">
+          <button
+            className="ml-4 tracking-widest resume resume-text p-2"
+            onClick={() => {
+              window.location.href =
+                "https://drive.google.com/uc?export=download&id=1b76NRDU-JntR_lCTJ2_l-FVi7c6BjMTs";
+            }}
+          >
             Resume
           </button>
         </div>

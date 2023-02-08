@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "./Input";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -32,91 +33,55 @@ export default function Contact() {
       <form
         onSubmit={handleSubmit}
         method="post"
-        className="w-2/3 mx-auto my-8 flex flex-col items-center rounded-lg border-white border-2"
+        className="mx-auto my-8 flex flex-col items-center rounded-xl border-beige border-2"
       >
-        <div className="w-full flex flex-col items-center my-4">
-          <label
-            htmlFor="name"
-            className="w-1/4 my-2 h-full text-2xl text-center"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Hey there!"
-            required
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            className="text-light-black w-2/3 h-full p-3 tracking-wide rounded-xl"
-          />
-        </div>
-        <div className="w-full flex flex-col items-center my-4">
-          <label
-            htmlFor="email"
-            className="w-1/4 my-2 h-full text-2xl text-center"
-          >
-            Email
-          </label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="How can I reach you?"
-            required
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            className="text-light-black w-2/3 h-full p-3 tracking-wide rounded-xl"
-          />
-        </div>
-        <div className="w-full flex flex-col items-center my-4">
-          <label
-            htmlFor="subject"
-            className="w-1/4 my-2 h-full text-2xl text-center"
-          >
-            Subject
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="What's up?"
-            required
-            value={subject}
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
-            className="text-light-black w-2/3 h-full p-3 tracking-wide rounded-xl"
-          />
-        </div>
-        <div className="w-full flex flex-col items-center my-4">
-          <label
-            htmlFor="message"
-            className="w-1/4 my-2 h-full text-2xl text-center"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Alright! Let's talk it over at coffee..."
-            rows={7}
-            required
-            value={text}
-            onChange={(e) => {
-              setText(e.target.value);
-            }}
-            className="text-light-black w-2/3 h-full p-3 tracking-wide rounded-xl"
-          />
+        <div className="flex justify-around w-full">
+          <div className="flex flex-col my-8 w-1/2 justify-around">
+            <Input
+              name="name"
+              labelName="Name"
+              placeholder="Hey there!"
+              value={name}
+              setValue={setName}
+            />
+            <Input
+              name="email"
+              labelName="Email"
+              placeholder="How can I reach you?"
+              value={email}
+              setValue={setEmail}
+            />
+            <Input
+              name="subject"
+              labelName="Subject"
+              placeholder="What's up?"
+              value={subject}
+              setValue={setSubject}
+            />
+          </div>
+          <div className="flex flex-col items-center my-8 w-1/2 justify-around">
+            <div className="w-3/4">
+              <label htmlFor="message" className="text-2xl py-2 float-left">
+                Message
+              </label>
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Alright! Let's talk it over at coffee..."
+              rows={7}
+              required
+              value={text}
+              onChange={(e) => {
+                setText(e.target.value);
+              }}
+              className="text-light-black h-full tracking-wide rounded-xl w-3/4 p-2 my-4 bg-beige--"
+            />
+          </div>
         </div>
         <button
           type="submit"
-          className="resume resume-text p-2 mt-4 mb-8 text-xl tracking-wider"
+          className="resume resume-text p-2 mb-8 text-xl tracking-wider w-1/6"
         >
           Submit
         </button>

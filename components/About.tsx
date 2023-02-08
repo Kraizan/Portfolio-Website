@@ -20,7 +20,7 @@ export default function About() {
           <br />
           <p>
             My leisure time usually passes by watching anime or playing the
-            latest video games. Ping me if you're an Otaku. 😉
+            latest video games. Ping me if you're an Otaku.
           </p>
         </div>
       </div>
