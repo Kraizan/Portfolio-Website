@@ -22,9 +22,9 @@ export default function Skills() {
     { src: "/images/MySQL.png", alt: "MySQL", level: "80%" },
   ];
   return (
-    <div className="my-16">
+    <div id="Skills" className="my-16">
       <div className="text-5xl mb-4 text-beige font-medium">Skills</div>
-      <div id="Skills" className="flex justify-between">
+      <div className="flex justify-between">
         <SkillGroup title="Languages" skills={langs} />
         <SkillGroup title="Development" skills={techStack} />
         <SkillGroup title="Miscellaneous" skills={miscs} />
